@@ -28,7 +28,7 @@ pipeline {
     }
     stage ('Deploy') {
       steps {
-        sshPut remote: remote, from: '/usr/Angular12/**', into: '/bin'
+        sshPut remote: remote, from: '/usr/Angular12/angular', into: '/bin'
       }
     }
   }  
