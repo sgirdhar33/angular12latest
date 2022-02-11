@@ -28,8 +28,7 @@ pipeline {
     }
     stage ('Deploy') {
       steps {
-        writeFile file: '/usr/Angular12/angular', text: 'ls -lrt'
-        sshPut remote: remote, from: '/usr/Angular12/angular', into: '/bin'
+        bat 'scp C:\ProgramData\Jenkins\.jenkins\workspace\Angular12\dist\angular12\** Saurav@52.142.51.127:/usr/Angular12'
       }
     }
   }  
