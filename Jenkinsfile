@@ -1,3 +1,12 @@
+import jenkins.model.Jenkins
+
+def remote = [:]
+remote.name = 'devserver'
+remote.host = 'devserver.tyvfdx01quee1cf1ytggu2itxc.bx.internal.cloudapp.net'
+remote.user = 'Saurav'
+remote.password = 'Venuka@20221987'
+remote.allowAnyhosts = true
+
 pipeline {
   agent any
   
@@ -16,6 +25,9 @@ pipeline {
       steps {
         bat 'ng build'
       }
+    }
+    stage ('Deploy') {
+      sshPut remote: remote, from: 'C:/ProgramData/Jenkins/.jenkins/workspace/Angular12/dist/angular12/*.*', into: '/usr/Angular12/'
     }
   }  
 }
