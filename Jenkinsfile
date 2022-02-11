@@ -28,8 +28,8 @@ pipeline {
     }
     stage ('Deploy') {
       steps {
-        bat '"C:\\Program Files\\git\\usr\\bin\\scp.exe" "C:\\Users\\Saurav\\.ssh\\id_rsa" C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Angular12\\dist\\angular12\\3rdpartylicenses.txt Saurav@40.71.189.81:/usr'
-        bat '"C:\\Program Files\\git\\usr\\bin\\ssh.exe" "C:\\Users\\Saurav\\.ssh\\id_rsa" Saurav@40.71.189.81'
+        bat '"C:\\Program Files\\git\\usr\\bin\\ssh.exe" -i "C:\\Users\\Saurav\\.ssh\\id_rsa" Saurav@40.71.189.81'
+        bat '"C:\\Program Files\\git\\usr\\bin\\scp.exe" -i "C:\\Users\\Saurav\\.ssh\\id_rsa" C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Angular12\\dist\\angular12\\3rdpartylicenses.txt Saurav@40.71.189.81:/usr'
       }
     }
   }  
