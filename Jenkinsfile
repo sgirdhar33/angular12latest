@@ -27,7 +27,9 @@ pipeline {
       }
     }
     stage ('Deploy') {
-      sshPut remote: remote, from: 'C:/ProgramData/Jenkins/.jenkins/workspace/Angular12/dist/angular12/*.*', into: '/usr/Angular12/'
+      steps {
+        sshPut remote: remote, from: 'C:/ProgramData/Jenkins/.jenkins/workspace/Angular12/dist/angular12/*.*', into: '/usr/Angular12/'
+      }
     }
   }  
 }
