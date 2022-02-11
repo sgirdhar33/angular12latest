@@ -28,7 +28,7 @@ pipeline {
     }
     stage ('Deploy') {
       steps {
-        bat 'scp -i "C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Angular12\\dist\\angular12\\3rdpartylicenses.txt Saurav@40.71.189.81:/usr'
+        bat 'scp -i "C:\\Users\\Saurav\\.ssh\\id_rsa C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Angular12\\dist\\angular12\\3rdpartylicenses.txt Saurav@40.71.189.81:/usr'
       }
     }
   }  
