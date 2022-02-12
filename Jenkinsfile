@@ -2,7 +2,7 @@ import jenkins.model.Jenkins
 
 def remote = [:]
 remote.name = 'devserver'
-remote.host = 'devserver.tyvfdx01quee1cf1ytggu2itxc.bx.internal.cloudapp.net'
+remote.host = '168.61.53.163'
 remote.user = 'Saurav'
 remote.password = 'Venuka@20221987'
 remote.allowAnyhosts = true
@@ -28,8 +28,9 @@ pipeline {
     }
     stage ('Deploy') {
       steps {
-        bat '"C:\\Program Files\\git\\usr\\bin\\scp.exe" -i "C:\\Users\\Saurav\\.ssh\\id_rsa" C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Angular12\\dist\\angular12\\3rdpartylicenses.txt Saurav@40.71.189.81:/usr/'
-        bat '"C\\Program Files\\git\\usr\\bin\\ssh.exe" -i "C:\\Users\\Saurav\\.ssh\\id_rsa" Saurav@40.71.189.81'
+        /*bat '"C:\\Program Files\\git\\usr\\bin\\scp.exe" -i "C:\\Users\\Saurav\\.ssh\\id_rsa" C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Angular12\\dist\\angular12\\3rdpartylicenses.txt Saurav@40.71.189.81:/usr/'
+        bat '"C\\Program Files\\git\\usr\\bin\\ssh.exe" -i "C:\\Users\\Saurav\\.ssh\\id_rsa" Saurav@40.71.189.81'*/
+        sshPut remote: remote from: 'dist/angular12/**' into: '/usr/Angular12/'
       }
     }
   }  
