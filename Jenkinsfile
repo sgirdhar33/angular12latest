@@ -4,7 +4,6 @@ def remote = [:]
 remote.name = 'devserver'
 remote.host = '20.127.134.213'
 remote.user = 'Saurav'
-remote.password = 'Venuka@20221987'
 remote.allowAnyhosts = true
 
 pipeline {
