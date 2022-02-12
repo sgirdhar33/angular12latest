@@ -30,7 +30,7 @@ pipeline {
       steps {
         /*bat '"C:\\Program Files\\git\\usr\\bin\\scp.exe" -i "C:\\Users\\Saurav\\.ssh\\id_rsa" C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Angular12\\dist\\angular12\\3rdpartylicenses.txt Saurav@40.71.189.81:/usr/'
         bat '"C\\Program Files\\git\\usr\\bin\\ssh.exe" -i "C:\\Users\\Saurav\\.ssh\\id_rsa" Saurav@40.71.189.81'*/
-        sshPut remote: remote from: 'dist/angular12/**' into: '/usr/Angular12/'
+        sshPut remote: remote from: 'Angular12/dist/angular12/**' into: '/usr/Angular12/'
       }
     }
   }  
