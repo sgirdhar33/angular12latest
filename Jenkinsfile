@@ -27,6 +27,7 @@ pipeline {
     }
     stage ('Deploy') {
       steps{
+        script {
         withCredentials([usernamePassword(credentialsId: '6b53c70e-ed39-4fb9-a6fc-dcdd3ba5cca8', passwordVariable: 'PASSWORD', usernameVariable: 'USERNAME')]) 
         {
           remote.password = "$PASSWORD"
@@ -37,4 +38,5 @@ pipeline {
       }
     } 
   }
+}
 }
