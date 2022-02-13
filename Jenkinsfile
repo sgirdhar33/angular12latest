@@ -28,7 +28,7 @@ pipeline {
     stage ('Deploy') {
       steps{
         script {
-        withCredentials([sshUserPrivateKey(credentialsId: 'jenkins-id-2', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'Saurav')]) 
+        /*withCredentials([sshUserPrivateKey(credentialsId: 'jenkins-id-2', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'Saurav')]) 
         {
           remote.user = Saurav
           remote.identityFile = identity
@@ -36,6 +36,15 @@ pipeline {
         /*bat '"C:\\Program Files\\git\\usr\\bin\\scp.exe" -i "C:\\Users\\Saurav\\.ssh\\id_rsa" C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Angular12\\dist\\angular12\\3rdpartylicenses.txt Saurav@40.71.189.81:/usr/'
         bat '"C\\Program Files\\git\\usr\\bin\\ssh.exe" -i "C:\\Users\\Saurav\\.ssh\\id_rsa" Saurav@40.71.189.81'*/
         sshPut remote: remote, from: 'dist/angular12/3rdpartylicenses.txt', into: '/usr/'
+        }*/
+        ithCredentials([sshUserPrivateKey(credentialsId: 'devserver', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD' )]) 
+        {
+          remote.user = "$USERNAME"
+          remote.password = "$PASSWORD"
+          
+        /*bat '"C:\\Program Files\\git\\usr\\bin\\scp.exe" -i "C:\\Users\\Saurav\\.ssh\\id_rsa" C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\Angular12\\dist\\angular12\\3rdpartylicenses.txt Saurav@40.71.189.81:/usr/'
+        bat '"C\\Program Files\\git\\usr\\bin\\ssh.exe" -i "C:\\Users\\Saurav\\.ssh\\id_rsa" Saurav@40.71.189.81'*/
+        sshPut remote: remote, from: 'dist/angular12/index.html', into: '/usr/'
         }
       }
     } 
