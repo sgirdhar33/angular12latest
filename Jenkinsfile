@@ -28,7 +28,7 @@ pipeline {
     stage ('Deploy') {
       steps{
         script {
-        withCredentials([sshUserPrivateKey(credentialsId: 'jenkins-id-2', keyFileVariable: 'identity', passwordVariable: '')]) 
+        withCredentials([sshUserPrivateKey(credentialsId: 'jenkins-id-2', keyFileVariable: 'identity', passphraseVariable: '', usernameVariable: 'Saurav')]) 
         {
           remote.user = Saurav
           remote.identityFile = identity
