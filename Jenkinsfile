@@ -2,7 +2,7 @@ import jenkins.model.Jenkins
 
 def remote = [:]
 remote.name = 'devserver'
-remote.host = '20.127.134.213'
+remote.host = '20.102.63.112'
 remote.user = 'Saurav'
 remote.allowAnyhosts = true
 
