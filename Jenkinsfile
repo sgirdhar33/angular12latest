@@ -37,7 +37,7 @@ pipeline {
         bat '"C\\Program Files\\git\\usr\\bin\\ssh.exe" -i "C:\\Users\\Saurav\\.ssh\\id_rsa" Saurav@40.71.189.81'
         sshPut remote: remote, from: 'dist/angular12/3rdpartylicenses.txt', into: '/usr/'
         }*/
-        ithCredentials([sshUserPrivateKey(credentialsId: 'devserver', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD' )]) 
+        ithCredentials([usernamePassword(credentialsId: 'devserver', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD' )]) 
         {
           remote.user = "$USERNAME"
           remote.password = "$PASSWORD"
