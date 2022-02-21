@@ -21,14 +21,16 @@ pipeline {
       }
     }
     
-    stage ('Installing modules in nexus') {
-      steps {
-        bat 'npm install --registry=http://20.120.72.22:8081/repository/npm-registry1'
-      }
-    }
+    
     stage ('Build') {
       steps {
         bat 'ng build'
+      }
+    }
+    
+    stage ('Installing modules in nexus') {
+      steps {
+        bat 'npm install --registry=http://20.120.72.22:8081/repository/npm-registry1'
       }
     }
     
