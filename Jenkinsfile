@@ -34,7 +34,7 @@ pipeline {
     
     stage ('npm publish') {
       steps {
-        bat 'npm run updateBuild && npm publish --registry 'http://20.120.72.22:8081/repository/npm-internal'
+        bat 'npm run updateBuild && npm publish --registry http://20.120.72.22:8081/repository/npm-internal'
       }
     }
     /*stage ('Deploy') {
