@@ -28,17 +28,17 @@ pipeline {
       }
     }
     
-    stage ('Installing modules in nexus') {
+    /*stage ('Installing modules in nexus') {
       steps {
         bat 'npm install --registry=http://20.120.72.22:8081/repository/npm-registry1'
       }
-    }
+    }*/
     
-    stage ('npm publish') {
+    /*stage ('npm publish') {
       steps {
         bat 'npm run updateBuild && npm publish --registry http://20.120.72.22:8081/repository/npm-internal'
       }
-    }
+    }*/
     /*stage ('Deploy') {
       steps{
         script {
