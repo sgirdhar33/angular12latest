@@ -1,6 +1,9 @@
 {
   "name": "angular12",
   "version": "0.0.0",
+  "files": [
+      "dist/angular12/*.*"
+  ],
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -8,7 +11,9 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
-  
+  "publishConfig" : {
+  "registry" : "http://20.121.10.70:8081/repository/npm-internal/"
+},
   "private": true,
   "dependencies": {
     "@angular/animations": "~12.1.0-",
