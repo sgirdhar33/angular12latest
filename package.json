@@ -9,7 +9,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "updateBuild": "node ./nexus-version.build.js"
   },
   "publishConfig" : {
   "registry" : "http://20.121.10.70:8081/repository/npm-internal/"
