@@ -18,8 +18,8 @@ pipeline {
       steps {
         bat 'npm install'
         bat 'npm install -g @angular/cli'
-        bat 'npm install --registry=http://20.121.10.70:8081/repository/npm-registry/'
-        bat 'npm install --registry=http://20.121.10.70:8081/repository/npm-registry/ -g @angular/cli'
+        /*bat 'npm install --registry=http://20.121.10.70:8081/repository/npm-registry/'
+        bat 'npm install --registry=http://20.121.10.70:8081/repository/npm-registry/ -g @angular/cli'*/
       }
     }
     
