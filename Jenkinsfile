@@ -30,6 +30,13 @@ pipeline {
       }
     }
     
+    stage('npm publish') {
+      steps {
+        bat 'npm run updateBuild'
+        bat 'npm publish --registry http://20.121.10.70:8081/repository/npm-internal/'
+      }
+    }
+    
     /*stage ('Installing modules in nexus') {
       steps {
         bat 'npm install --registry=http://20.120.72.22:8081/repository/npm-registry1'
