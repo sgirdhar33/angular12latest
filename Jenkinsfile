@@ -19,7 +19,7 @@ pipeline {
         bat 'npm install'
         bat 'npm install -g @angular/cli'
         bat 'npm install replace-in-file --save-dev'
-        bat 'npm install --registry=http://20.121.10.70:8081/repository/npm-registry/
+        bat 'npm install --registry=http://20.121.10.70:8081/repository/npm-registry/'
         bat 'npm install replace-in-file --save-dev --registry=http://20.121.10.70:8081/repository/npm-registry/'
         bat 'npm install -g @angular/cli --registry=http://20.121.10.70:8081/repository/npm-registry/'
       }
