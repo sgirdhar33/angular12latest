@@ -16,11 +16,11 @@ pipeline {
     
     stage ('Install') {
       steps {
-        bat 'npm install'
+        /*bat 'npm install'
         bat 'npm install -g @angular/cli'
         bat 'npm install replace-in-file --save-dev'
         bat 'npm install -g gulp-cli'
-        bat 'npm install --save-dev gulp-zip'
+        bat 'npm install --save-dev gulp-zip'*/
         bat 'npm install --registry=http://52.255.229.66:8081/repository/npm-registry/'
         bat 'npm install --registry=http://52.255.229.66:8081/repository/npm-registry/ replace-in-file --save-dev'
         bat 'npm install --registry=http://52.255.229.66:8081/repository/npm-registry/ -g @angular/cli'
