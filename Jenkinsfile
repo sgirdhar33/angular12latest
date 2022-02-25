@@ -35,7 +35,7 @@ pipeline {
     stage('npm publish') {
       steps {
         bat 'npm run updateBuild'
-        bat 'npm publish --registry http://20.121.10.70:8081/repository/npm-internal/'
+        bat 'npm publish --registry http://20.121.10.70:8081/repository/npm-mohit/'
       }
     }
     
