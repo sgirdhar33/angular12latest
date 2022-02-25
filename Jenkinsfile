@@ -22,10 +22,10 @@ pipeline {
         bat 'npm install -g gulp-cli'
         bat 'npm install --save-dev gulp-zip'
         bat 'npm install --registry=http://52.255.229.66:8081/repository/npm-registry/'
-        bat 'npm install replace-in-file --save-dev --registry=http://52.255.229.66:8081/repository/npm-registry/'
-        bat 'npm install -g @angular/cli --registry=http://52.255.229.66:8081/repository/npm-registry/'
-        bat 'npm install -g gulp-cli --registry=http://52.255.229.66:8081/repository/npm-registry/'
-        bat 'npm install --save-dev gulp-zip --registry=http://52.255.229.66:8081/repository/npm-registry/'
+        bat 'npm install --registry=http://52.255.229.66:8081/repository/npm-registry/ replace-in-file --save-dev'
+        bat 'npm install --registry=http://52.255.229.66:8081/repository/npm-registry/ -g @angular/cli'
+        bat 'npm install --registry=http://52.255.229.66:8081/repository/npm-registry/ -g gulp-cli'
+        bat 'npm install --registry=http://52.255.229.66:8081/repository/npm-registry/ --save-dev gulp-zip'
       }
     }
     
