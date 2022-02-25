@@ -13,7 +13,7 @@
     "updateBuild": "node ./nexus-version.build.js"
   },
   "publishConfig" : {
-  "registry" : "http://20.121.10.70:8081/repository/npm-mohit/"
+  "registry" : "http://52.255.229.66:8081/repository/npm-mohit/"
 },
   "private": false,
   "dependencies": {
