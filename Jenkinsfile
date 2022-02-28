@@ -16,6 +16,7 @@ pipeline {
     
     stage ('Install') {
       steps {
+        bat 'npm config set registry http://20.127.81.217:8081/repository/npm-registry/'
         bat 'npm install --registry=http://20.127.81.217:8081/repository/npm-registry/'
         bat 'npm install --registry=http://20.127.81.217:8081/repository/npm-registry/ replace-in-file --save-dev'
         bat 'npm install --registry=http://20.127.81.217:8081/repository/npm-registry/ -g @angular/cli'
