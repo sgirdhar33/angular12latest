@@ -13,7 +13,7 @@
     "updateBuild": "node ./nexus-version.build.js"
   },
   "publishConfig" : {
-  "registry" : "http://52.255.229.66:8081/repository/npm-internal/"
+  "registry" : "http://20.127.81.217:8081/repository/npm-internal/"
 },
   "private": false,
   "dependencies": {
