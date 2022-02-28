@@ -21,11 +21,11 @@ pipeline {
         bat 'npm install replace-in-file --save-dev'
         bat 'npm install -g gulp-cli'
         bat 'npm install --save-dev gulp-zip'
-        bat 'npm install --registry=http://52.255.229.66:8081/repository/npm-registry/'
-        bat 'npm install --registry=http://52.255.229.66:8081/repository/npm-registry/ replace-in-file --save-dev'
-        bat 'npm install --registry=http://52.255.229.66:8081/repository/npm-registry/ -g @angular/cli'
-        bat 'npm install --registry=http://52.255.229.66:8081/repository/npm-registry/ -g gulp-cli'
-        bat 'npm install --registry=http://52.255.229.66:8081/repository/npm-registry/ --save-dev gulp-zip'
+        bat 'npm install --registry=http://20.127.81.217:8081/repository/npm-registry/'
+        bat 'npm install --registry=http://20.127.81.217:8081/repository/npm-registry/ replace-in-file --save-dev'
+        bat 'npm install --registry=http://20.127.81.217:8081/repository/npm-registry/ -g @angular/cli'
+        bat 'npm install --registry=http://20.127.81.217:8081/repository/npm-registry/ -g gulp-cli'
+        bat 'npm install --registry=http://20.127.81.217:8081/repository/npm-registry/ --save-dev gulp-zip'
       }
     }
     
@@ -39,7 +39,7 @@ pipeline {
     stage('npm publish') {
       steps {
         bat 'npm run updateBuild'
-        bat 'npm publish --registry http://52.255.229.66:8081/repository/npm-internal/'
+        bat 'npm publish --registry http://20.127.81.217:8081/repository/npm-internal/'
       }
     }
     
